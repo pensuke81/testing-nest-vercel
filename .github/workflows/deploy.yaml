@@ -13,5 +13,8 @@ jobs:
       - name: Install Deps
         run: yarn add vercel
 
+      - name: Build
+        run: yarn build
+
       - name: Deploy
-        run: yarn build && vercel -c --token ${{secrets.ZEIT_TOKEN}}
+        run: vercel -c --token ${{secrets.VERCEL_TOKEN}}
